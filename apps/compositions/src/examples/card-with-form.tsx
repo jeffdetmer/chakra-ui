@@ -2,7 +2,7 @@ import { Button, Card, Input, Stack } from "@chakra-ui/react"
 import { Field } from "compositions/ui/field"
 
 export const CardWithForm = () => (
-  <Card.Root>
+  <Card.Root maxW="sm">
     <Card.Header>
       <Card.Title>Sign up</Card.Title>
       <Card.Description>
@@ -19,7 +19,7 @@ export const CardWithForm = () => (
         </Field>
       </Stack>
     </Card.Body>
-    <Card.Footer justifyContent="flex-end" gap="2">
+    <Card.Footer justifyContent="flex-end">
       <Button variant="outline">Cancel</Button>
       <Button variant="solid">Sign in</Button>
     </Card.Footer>

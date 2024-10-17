@@ -38,7 +38,7 @@ export const alertAnatomy = createAnatomy("alert").parts(
   "description",
   "root",
   "indicator",
-  "spinner",
+  "content",
 )
 
 export const avatarAnatomy = arkAvatarAnatomy
@@ -77,6 +77,7 @@ export const checkboxCardAnatomy = createAnatomy("checkbox-card", [
   "label",
   "addon",
   "indicator",
+  "content",
 ])
 
 export const collapsibleAnataomy = arkCollapsibleAnatomy
@@ -149,6 +150,8 @@ export const radioGroupAnatomy = arkRadioGroupAnatomy.extendWith(
   "itemIndicator",
 )
 
+export const radioCardAnatomy = radioGroupAnatomy.extendWith("itemContent")
+
 export const ratingGroupAnatomy =
   arkRatingGroupAnatomy.extendWith("itemIndicator")
 
@@ -219,6 +222,8 @@ export const tagAnatomy = createAnatomy("tag").parts(
   "root",
   "label",
   "closeTrigger",
+  "startElement",
+  "endElement",
 )
 
 export const timelineAnatomy = createAnatomy("timeline").parts(
@@ -228,6 +233,8 @@ export const timelineAnatomy = createAnatomy("timeline").parts(
   "separator",
   "indicator",
   "connector",
+  "title",
+  "description",
 )
 
 export const tooltipAnatomy = arkTooltipAnatomy

@@ -18,7 +18,7 @@ export type BadgeVariantMap = {
 
 export interface ButtonVariant {
   /** @default "md" */
-  size?: "xs" | "sm" | "md" | "lg"
+  size?: "2xs" | "xs" | "sm" | "md" | "lg" | "xl" | "2xl"
   /** @default "solid" */
   variant?: "solid" | "subtle" | "surface" | "outline" | "ghost" | "plain"
 }
@@ -74,9 +74,9 @@ export type HeadingVariantMap = {
 
 export interface InputVariant {
   /** @default "md" */
-  size?: "lg" | "md" | "sm" | "xs"
+  size?: "2xs" | "xs" | "sm" | "md" | "lg" | "xl" | "2xl"
   /** @default "outline" */
-  variant?: "outline" | "filled" | "flushed"
+  variant?: "outline" | "subtle" | "flushed"
 }
 
 export type InputVariantProps = {
@@ -89,9 +89,9 @@ export type InputVariantMap = {
 
 export interface InputAddonVariant {
   /** @default "md" */
-  size?: "lg" | "md" | "sm" | "xs"
+  size?: "2xs" | "xs" | "sm" | "md" | "lg" | "xl" | "2xl"
   /** @default "outline" */
-  variant?: "outline" | "filled" | "flushed"
+  variant?: "outline" | "subtle" | "flushed"
 }
 
 export type InputAddonVariantProps = {
@@ -199,9 +199,9 @@ export type SpinnerVariantMap = {
 
 export interface TextareaVariant {
   /** @default "md" */
-  size?: "lg" | "md" | "sm" | "xs"
+  size?: "xs" | "sm" | "md" | "lg" | "xl"
   /** @default "outline" */
-  variant?: "outline" | "filled" | "flushed"
+  variant?: "outline" | "subtle" | "flushed"
 }
 
 export type TextareaVariantProps = {
@@ -212,7 +212,10 @@ export type TextareaVariantMap = {
   [K in keyof TextareaVariant]: Array<TextareaVariant[K]>
 }
 
-export interface IconVariant {}
+export interface IconVariant {
+  /** @default "inherit" */
+  size?: "inherit" | "xs" | "sm" | "md" | "lg" | "xl" | "2xl"
+}
 
 export type IconVariantProps = {
   [K in keyof IconVariant]?: ConditionalValue<IconVariant[K]> | undefined
@@ -224,9 +227,9 @@ export type IconVariantMap = {
 
 export interface CheckmarkVariant {
   /** @default "md" */
-  size?: "sm" | "md" | "lg"
-  /** @default "outline" */
-  variant?: "outline" | "subtle" | "plain" | "inverted"
+  size?: "xs" | "sm" | "md" | "lg"
+  /** @default "solid" */
+  variant?: "solid" | "outline" | "subtle" | "plain" | "inverted"
 }
 
 export type CheckmarkVariantProps = {
@@ -238,10 +241,10 @@ export type CheckmarkVariantMap = {
 }
 
 export interface RadiomarkVariant {
-  /** @default "outline" */
-  variant?: "outline" | "subtle" | "classic" | "inverted"
+  /** @default "solid" */
+  variant?: "solid" | "subtle" | "outline" | "inverted"
   /** @default "md" */
-  size?: "sm" | "md" | "lg"
+  size?: "xs" | "sm" | "md" | "lg"
 }
 
 export type RadiomarkVariantProps = {
@@ -308,11 +311,12 @@ export type ActionBarVariantMap = {
 
 // Alert
 
-export type AlertSlot = "title" | "description" | "root" | "indicator" | "spinner"
+export type AlertSlot = "title" | "description" | "root" | "indicator" | "content"
 
 export interface AlertVariant {
   /** @default "info" */
   status?: "info" | "warning" | "success" | "error" | "neutral"
+  inline?: boolean
   /** @default "subtle" */
   variant?: "subtle" | "surface" | "outline" | "solid"
   /** @default "md" */
@@ -333,7 +337,7 @@ export type AvatarSlot = "root" | "image" | "fallback"
 
 export interface AvatarVariant {
   /** @default "md" */
-  size?: "xs" | "sm" | "md" | "lg" | "xl" | "2xl"
+  size?: "full" | "2xs" | "xs" | "sm" | "md" | "lg" | "xl" | "2xl"
   /** @default "subtle" */
   variant?: "solid" | "subtle" | "outline"
   /** @default "full" */
@@ -357,7 +361,7 @@ export interface BlockquoteVariant {
   /** @default "start" */
   justify?: "start" | "center" | "end"
   /** @default "subtle" */
-  variant?: "subtle" | "solid"
+  variant?: "subtle" | "solid" | "plain"
 }
 
 export type BlockquoteVariantProps = {
@@ -412,9 +416,9 @@ export type CheckboxSlot = "root" | "label" | "control" | "indicator" | "group"
 
 export interface CheckboxVariant {
   /** @default "md" */
-  size?: "sm" | "md" | "lg"
-  /** @default "outline" */
-  variant?: "outline" | "subtle"
+  size?: "xs" | "sm" | "md" | "lg"
+  /** @default "solid" */
+  variant?: "outline" | "solid" | "subtle"
 }
 
 export type CheckboxVariantProps = {
@@ -427,13 +431,18 @@ export type CheckboxVariantMap = {
 
 // CheckboxCard
 
-export type CheckboxCardSlot = "root" | "control" | "label" | "addon" | "indicator"
+export type CheckboxCardSlot = "root" | "control" | "label" | "addon" | "indicator" | "content"
 
 export interface CheckboxCardVariant {
   /** @default "md" */
   size?: "sm" | "md" | "lg"
   /** @default "outline" */
   variant?: "surface" | "subtle" | "outline" | "solid"
+  justify?: "start" | "end" | "center"
+  /** @default "start" */
+  align?: "start" | "end" | "center"
+  /** @default "horizontal" */
+  orientation?: "vertical" | "horizontal"
 }
 
 export type CheckboxCardVariantProps = {
@@ -545,7 +554,10 @@ export type DrawerVariantMap = {
 
 export type EditableSlot = "root" | "area" | "label" | "preview" | "input" | "editTrigger" | "submitTrigger" | "cancelTrigger" | "control" | "textarea"
 
-export interface EditableVariant {}
+export interface EditableVariant {
+  /** @default "md" */
+  size?: "sm" | "md" | "lg"
+}
 
 export type EditableVariantProps = {
   [K in keyof EditableVariant]?: ConditionalValue<EditableVariant[K]> | undefined
@@ -561,7 +573,7 @@ export type EmptyStateSlot = "root" | "content" | "indicator" | "title" | "descr
 
 export interface EmptyStateVariant {
   /** @default "md" */
-  size?: "md" | "lg"
+  size?: "sm" | "md" | "lg"
 }
 
 export type EmptyStateVariantProps = {
@@ -591,7 +603,7 @@ export type FieldVariantMap = {
 export type FieldsetSlot = "root" | "errorText" | "helperText" | "legend" | "content"
 
 export interface FieldsetVariant {
-  /** @default "sm" */
+  /** @default "md" */
   size?: "sm" | "md"
 }
 
@@ -703,9 +715,9 @@ export type NativeSelectSlot = "root" | "field" | "indicator"
 
 export interface NativeSelectVariant {
   /** @default "outline" */
-  variant?: "outline" | "filled" | "plain"
+  variant?: "outline" | "subtle" | "plain"
   /** @default "md" */
-  size?: "lg" | "md" | "sm" | "xs"
+  size?: "xs" | "sm" | "md" | "lg" | "xl"
 }
 
 export type NativeSelectVariantProps = {
@@ -724,7 +736,7 @@ export interface NumberInputVariant {
   /** @default "md" */
   size?: "xs" | "sm" | "md" | "lg"
   /** @default "outline" */
-  variant?: "outline" | "filled" | "flushed"
+  variant?: "outline" | "subtle" | "flushed"
 }
 
 export type NumberInputVariantProps = {
@@ -741,9 +753,9 @@ export type PinInputSlot = "root" | "label" | "input" | "control"
 
 export interface PinInputVariant {
   /** @default "md" */
-  size?: "lg" | "md" | "sm" | "xs"
+  size?: "2xs" | "xs" | "sm" | "md" | "lg" | "xl" | "2xl"
   /** @default "outline" */
-  variant?: "outline" | "filled" | "flushed"
+  variant?: "outline" | "subtle" | "flushed"
 }
 
 export type PinInputVariantProps = {
@@ -792,11 +804,11 @@ export interface ProgressVariant {
   /** @default "outline" */
   variant?: "outline" | "subtle"
   /** @default "rounded" */
-  shape?: "square" | "rounded" | "pill"
+  shape?: "square" | "rounded" | "full"
   striped?: boolean
   animated?: boolean
   /** @default "md" */
-  size?: "xs" | "sm" | "md" | "lg"
+  size?: "xs" | "sm" | "md" | "lg" | "xl"
 }
 
 export type ProgressVariantProps = {
@@ -813,7 +825,7 @@ export type ProgressCircleSlot = "root" | "label" | "track" | "range" | "valueTe
 
 export interface ProgressCircleVariant {
   /** @default "md" */
-  size?: "xs" | "sm" | "md" | "lg"
+  size?: "xs" | "sm" | "md" | "lg" | "xl"
 }
 
 export type ProgressCircleVariantProps = {
@@ -826,13 +838,18 @@ export type ProgressCircleVariantMap = {
 
 // RadioCard
 
-export type RadioCardSlot = "root" | "label" | "item" | "itemText" | "itemControl" | "indicator" | "itemAddon" | "itemIndicator"
+export type RadioCardSlot = "root" | "label" | "item" | "itemText" | "itemControl" | "indicator" | "itemAddon" | "itemIndicator" | "itemContent"
 
 export interface RadioCardVariant {
   /** @default "md" */
   size?: "sm" | "md" | "lg"
   /** @default "outline" */
   variant?: "surface" | "subtle" | "outline" | "solid"
+  justify?: "start" | "end" | "center"
+  /** @default "start" */
+  align?: "start" | "end" | "center"
+  /** @default "horizontal" */
+  orientation?: "vertical" | "horizontal"
 }
 
 export type RadioCardVariantProps = {
@@ -848,10 +865,10 @@ export type RadioCardVariantMap = {
 export type RadioGroupSlot = "root" | "label" | "item" | "itemText" | "itemControl" | "indicator" | "itemAddon" | "itemIndicator"
 
 export interface RadioGroupVariant {
-  /** @default "outline" */
-  variant?: "outline" | "subtle" | "classic"
+  /** @default "solid" */
+  variant?: "outline" | "subtle" | "solid"
   /** @default "md" */
-  size?: "sm" | "md" | "lg"
+  size?: "xs" | "sm" | "md" | "lg"
 }
 
 export type RadioGroupVariantProps = {
@@ -885,7 +902,7 @@ export type SegmentGroupSlot = "root" | "label" | "item" | "itemText" | "itemCon
 
 export interface SegmentGroupVariant {
   /** @default "md" */
-  size?: "sm" | "md" | "lg"
+  size?: "xs" | "sm" | "md" | "lg"
 }
 
 export type SegmentGroupVariantProps = {
@@ -918,7 +935,7 @@ export type SelectSlot =
 
 export interface SelectVariant {
   /** @default "outline" */
-  variant?: "outline" | "filled"
+  variant?: "outline" | "subtle"
   /** @default "md" */
   size?: "xs" | "sm" | "md" | "lg"
 }
@@ -937,9 +954,9 @@ export type SliderSlot = "root" | "label" | "thumb" | "valueText" | "track" | "r
 
 export interface SliderVariant {
   /** @default "md" */
-  size?: "xs" | "sm" | "md" | "lg"
+  size?: "sm" | "md" | "lg"
   /** @default "outline" */
-  variant?: "outline" | "subtle"
+  variant?: "outline" | "solid"
   /** @default "horizontal" */
   orientation?: "vertical" | "horizontal"
 }
@@ -991,7 +1008,7 @@ export interface StepsVariant {
   /** @default "solid" */
   variant?: "solid" | "subtle"
   /** @default "md" */
-  size?: "sm" | "md" | "lg"
+  size?: "xs" | "sm" | "md" | "lg"
 }
 
 export type StepsVariantProps = {
@@ -1067,11 +1084,11 @@ export type TabsVariantMap = {
 
 // Tag
 
-export type TagSlot = "root" | "label" | "closeTrigger"
+export type TagSlot = "root" | "label" | "closeTrigger" | "startElement" | "endElement"
 
 export interface TagVariant {
   /** @default "md" */
-  size?: "sm" | "md" | "lg"
+  size?: "sm" | "md" | "lg" | "xl"
   /** @default "surface" */
   variant?: "subtle" | "solid" | "outline" | "surface"
 }
@@ -1131,13 +1148,13 @@ export type StatusVariantMap = {
 
 // Timeline
 
-export type TimelineSlot = "root" | "item" | "content" | "separator" | "indicator" | "connector"
+export type TimelineSlot = "root" | "item" | "content" | "separator" | "indicator" | "connector" | "title" | "description"
 
 export interface TimelineVariant {
   /** @default "solid" */
   variant?: "subtle" | "solid" | "outline" | "plain"
   /** @default "md" */
-  size?: "sm" | "md"
+  size?: "sm" | "md" | "lg" | "xl"
 }
 
 export type TimelineVariantProps = {

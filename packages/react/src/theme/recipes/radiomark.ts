@@ -15,7 +15,7 @@ export const radiomarkRecipe = defineRecipe({
     cursor: "radio",
     _focusVisible: {
       outline: "2px solid",
-      outlineColor: "focusRing",
+      outlineColor: "colorPalette.focusRing",
       outlineOffset: "2px",
     },
     _invalid: {
@@ -38,7 +38,7 @@ export const radiomarkRecipe = defineRecipe({
 
   variants: {
     variant: {
-      outline: {
+      solid: {
         borderWidth: "1px",
         borderColor: "border",
         bg: "bg",
@@ -59,12 +59,12 @@ export const radiomarkRecipe = defineRecipe({
         },
       },
 
-      classic: {
+      outline: {
         borderWidth: "1px",
         borderColor: "inherit",
         _checked: {
           color: "colorPalette.fg",
-          borderColor: "currentcolor",
+          borderColor: "colorPalette.solid",
         },
         "& .dot": {
           scale: "0.6",
@@ -83,22 +83,26 @@ export const radiomarkRecipe = defineRecipe({
     },
 
     size: {
-      sm: {
+      xs: {
         boxSize: "3",
       },
 
-      md: {
+      sm: {
         boxSize: "4",
       },
 
-      lg: {
+      md: {
         boxSize: "5",
+      },
+
+      lg: {
+        boxSize: "6",
       },
     },
   },
 
   defaultVariants: {
-    variant: "outline",
+    variant: "solid",
     size: "md",
   },
 })

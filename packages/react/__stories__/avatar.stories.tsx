@@ -14,9 +14,11 @@ export default {
 
 export { AvatarBasic as Basic } from "compositions/examples/avatar-basic"
 export { AvatarGroupWithStacking as GroupStacking } from "compositions/examples/avatar-group-with-stacking"
+export { AvatarPersona as Persona } from "compositions/examples/avatar-persona"
 export { AvatarSizeTable as Sizes } from "compositions/examples/avatar-size-table"
 export { AvatarVariantTable as Variants } from "compositions/examples/avatar-variant-table"
 export { AvatarWithBadge as Badge } from "compositions/examples/avatar-with-badge"
 export { AvatarWithFallback as Fallback } from "compositions/examples/avatar-with-fallback"
 export { AvatarWithGroup as Group } from "compositions/examples/avatar-with-group"
-export { AvatarWithPopover as Popover } from "compositions/examples/avatar-with-popover"
+export { AvatarWithOverflow as Overflow } from "compositions/examples/avatar-with-overflow"
+export { AvatarWithShape as Shape } from "compositions/examples/avatar-with-shape"
