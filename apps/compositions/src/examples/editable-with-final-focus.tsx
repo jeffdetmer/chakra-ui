@@ -8,11 +8,9 @@ export const EditableWithFinalFocus = () => {
 
   return (
     <Stack>
-      <Input placeholder="Placeholder" ref={ref} />
       <Editable.Root
         finalFocusEl={() => ref.current}
         defaultValue="Final fantasy"
-        fontSize="xl"
       >
         <Editable.Preview />
         <Editable.Input />
@@ -22,6 +20,8 @@ export const EditableWithFinalFocus = () => {
           <Editable.SubmitTrigger>Submit</Editable.SubmitTrigger>
         </Editable.Control>
       </Editable.Root>
+
+      <Input placeholder="Placeholder" ref={ref} />
     </Stack>
   )
 }

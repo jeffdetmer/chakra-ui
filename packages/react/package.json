@@ -1,6 +1,6 @@
 {
   "name": "@chakra-ui/react",
-  "version": "3.0.0-next.29",
+  "version": "3.0.0-next.30",
   "description": "Responsive and accessible React UI components built with React and Emotion",
   "type": "module",
   "main": "dist/cjs/index.cjs",
@@ -39,7 +39,7 @@
   },
   "dependencies": {
     "@ark-ui/anatomy": "3.5.0",
-    "@ark-ui/react": "4.1.0",
+    "@ark-ui/react": "4.1.2",
     "@emotion/is-prop-valid": "1.3.1",
     "@emotion/serialize": "1.3.2",
     "@emotion/use-insertion-effect-with-fallbacks": "1.1.0",
@@ -125,14 +125,14 @@
       }
     },
     "./collection": {
-      "source": "./src/collection/index.ts",
+      "source": "./src/collection.ts",
       "import": {
-        "types": "./dist/types/collection/index.d.ts",
-        "default": "./dist/esm/collection/index.js"
+        "types": "./dist/types/collection.d.ts",
+        "default": "./dist/esm/collection.js"
       },
       "require": {
-        "types": "./dist/types/collection/index.d.ts",
-        "default": "./dist/cjs/collection/index.cjs"
+        "types": "./dist/types/collection.d.ts",
+        "default": "./dist/cjs/collection.cjs"
       }
     },
     "./*": {

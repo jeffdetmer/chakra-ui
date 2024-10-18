@@ -15,9 +15,10 @@ export const nativeSelectSlotRecipe = defineSlotRecipe({
     },
     field: {
       width: "100%",
-      minWidth: 0,
-      outline: 0,
+      minWidth: "0",
+      outline: "0",
       appearance: "none",
+      borderRadius: "l2",
       _disabled: {
         layerStyle: "disabled",
       },
@@ -58,47 +59,30 @@ export const nativeSelectSlotRecipe = defineSlotRecipe({
       outline: {
         field: selectSlotRecipe.variants?.variant.outline.trigger,
       },
-      filled: {
-        field: selectSlotRecipe.variants?.variant.filled.trigger,
+      subtle: {
+        field: selectSlotRecipe.variants?.variant.subtle.trigger,
       },
       plain: {},
     },
 
     size: {
-      lg: {
+      xs: {
         field: {
-          textStyle: "md",
-          ps: "4",
-          pe: "8",
-          borderRadius: "md",
-          height: "12",
+          textStyle: "xs",
+          ps: "2",
+          pe: "6",
+          height: "6",
         },
         indicator: {
-          textStyle: "xl",
-          insetEnd: "3",
-        },
-      },
-
-      md: {
-        field: {
           textStyle: "sm",
-          ps: "3",
-          pe: "8",
-          borderRadius: "md",
-          height: "10",
-        },
-        indicator: {
-          textStyle: "lg",
-          insetEnd: "2",
+          insetEnd: "1.5",
         },
       },
-
       sm: {
         field: {
           textStyle: "sm",
-          ps: "3",
+          ps: "2.5",
           pe: "8",
-          borderRadius: "sm",
           height: "8",
         },
         indicator: {
@@ -106,18 +90,40 @@ export const nativeSelectSlotRecipe = defineSlotRecipe({
           insetEnd: "2",
         },
       },
-
-      xs: {
+      md: {
         field: {
-          textStyle: "xs",
-          ps: "2",
-          pe: "6",
-          borderRadius: "sm",
-          height: "6",
+          textStyle: "sm",
+          ps: "3",
+          pe: "8",
+          height: "10",
         },
         indicator: {
-          textStyle: "sm",
-          insetEnd: "1.5",
+          textStyle: "lg",
+          insetEnd: "2",
+        },
+      },
+      lg: {
+        field: {
+          textStyle: "md",
+          ps: "4",
+          pe: "8",
+          height: "11",
+        },
+        indicator: {
+          textStyle: "xl",
+          insetEnd: "3",
+        },
+      },
+      xl: {
+        field: {
+          textStyle: "md",
+          ps: "4.5",
+          pe: "10",
+          height: "12",
+        },
+        indicator: {
+          textStyle: "xl",
+          insetEnd: "3",
         },
       },
     },

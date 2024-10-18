@@ -14,7 +14,7 @@ export const breadcrumbSlotRecipe = defineSlotRecipe({
     link: {
       outline: "0",
       textDecoration: "none",
-      rounded: "xs",
+      borderRadius: "l1",
       focusRing: "outside",
       display: "inline-flex",
       alignItems: "center",
@@ -69,19 +69,19 @@ export const breadcrumbSlotRecipe = defineSlotRecipe({
       sm: {
         list: {
           gap: "1",
-          fontSize: "xs",
+          textStyle: "xs",
         },
       },
       md: {
         list: {
           gap: "1.5",
-          fontSize: "sm",
+          textStyle: "sm",
         },
       },
       lg: {
         list: {
           gap: "2",
-          fontSize: "md",
+          textStyle: "md",
         },
       },
     },

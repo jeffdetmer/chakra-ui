@@ -2,7 +2,7 @@ import { Badge, Box, Card, HStack, Image } from "@chakra-ui/react"
 import { Button } from "compositions/ui/button"
 
 export const CardHorizontal = () => (
-  <Card.Root flexDirection="row" overflow="hidden">
+  <Card.Root flexDirection="row" overflow="hidden" maxW="xl">
     <Image
       objectFit="cover"
       maxW="200px"
@@ -11,7 +11,7 @@ export const CardHorizontal = () => (
     />
     <Box>
       <Card.Body>
-        <Card.Title>The perfect latte</Card.Title>
+        <Card.Title mb="2">The perfect latte</Card.Title>
         <Card.Description>
           Caffè latte is a coffee beverage of Italian origin made with espresso
           and steamed milk.
