@@ -1,6 +1,6 @@
 {
   "name": "@chakra-ui/cli",
-  "version": "3.19.2",
+  "version": "3.21.0",
   "description": "Generate theme typings for autocomplete",
   "keywords": [
     "theme",
@@ -74,7 +74,7 @@
   },
   "exports": {
     ".": {
-      "source": "./src/index.ts",
+      "dev": "./src/index.ts",
       "import": {
         "types": "./dist/types/index.d.ts",
         "default": "./dist/esm/index.js"
