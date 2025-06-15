@@ -1,6 +1,6 @@
 {
   "name": "@chakra-ui/panda-preset",
-  "version": "3.19.2",
+  "version": "3.21.0",
   "description": "Panda preset for Chakra UI",
   "type": "module",
   "main": "dist/cjs/index.cjs",
@@ -46,7 +46,7 @@
   },
   "exports": {
     ".": {
-      "source": "./src/index.ts",
+      "dev": "./src/index.ts",
       "import": {
         "types": "./dist/types/index.d.ts",
         "default": "./dist/esm/index.js"
